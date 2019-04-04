@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: spring-config-server
+  profiles:
+    active: local,development,production
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/ijayakantha/spring-config-server
+          search-paths: server-config/
+server:
+  port: 8888
+management:
+  security:
+    enabled: false
